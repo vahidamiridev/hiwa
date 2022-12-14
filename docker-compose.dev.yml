@@ -1,0 +1,14 @@
+version: '3'
+services:
+  nextjs-docker-ibviraco:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - 3000:3000
+    container_name: ibviraco
+    image: nextjs-ibviraco
+    volumes:
+       - ./:/app
+       - /app/node_modules
+    restart: always
